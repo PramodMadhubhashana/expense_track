@@ -5,7 +5,7 @@ class ExpenceModel {
     required this.title,
     required this.amount,
     required this.date,
-    required this.category;
+    required this.category,
   });
 
   final String title;

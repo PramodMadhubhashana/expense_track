@@ -1,4 +1,8 @@
+import 'package:uuid/uuid.dart';
+
 enum Category { food, travel, leasure, work }
+
+final uuid = const Uuid().v4();
 
 class ExpenceModel {
   ExpenceModel({

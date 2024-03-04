@@ -29,14 +29,14 @@ class ExpenceTile extends StatelessWidget {
                   width: 10,
                 ),
                 const Spacer(),
-                const Icon(
-                  Icons.trending_down,
+                Icon(
+                  categoryIcons[expence.category],
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 Text(
-                  expence.date.toString(),
+                  expence.getFormatedData,
                 ),
               ],
             ),

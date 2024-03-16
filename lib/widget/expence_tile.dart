@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ExpenceTile extends StatelessWidget {
   const ExpenceTile({Key? key, required this.expence}) : super(key: key);
 
-  final ExpenceModel expence;
+  final ExpenceModel expence;  
   @override
   Widget build(BuildContext context) {
     return Card(

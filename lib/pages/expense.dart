@@ -36,9 +36,23 @@ class _ExpenseState extends State<Expense> {
     showModalBottomSheet(
       context: context,
       builder: (context) {
-        return const AddNewExpence();
+        return AddNewExpence(
+          onAddExpensive: onAddNewExpence,
+        );
       },
     );
+  }
+
+  void onAddNewExpence(ExpenceModel expence) {
+    setState(() {
+      _expenceList.add(expence);
+    });
+  }
+
+  void onDeleteExpence(ExpenceModel expence) {
+    setState(() {
+      _expenceList.remove(expence);
+    });
   }
 
   @override
@@ -63,7 +77,10 @@ class _ExpenseState extends State<Expense> {
       ),
       body: Column(
         children: [
-          ExpenceList(expenceList: _expenceList),
+          ExpenceList(
+            expenceList: _expenceList,
+            onDeleteExpence: onDeleteExpence,
+          ),
         ],
       ),
     );

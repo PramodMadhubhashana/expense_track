@@ -137,8 +137,8 @@ class _ExpenseState extends State<Expense> {
         actions: [
           Container(
             color: Colors.blueGrey[100],
-            child: IconButton(
-              onPressed: _openAddExpencesOverlay,
+              child: IconButton(
+                onPressed: _openAddExpencesOverlay,
               icon: const Icon(
                 Icons.add,
                 color: Colors.black,
